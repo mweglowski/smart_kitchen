@@ -6,5 +6,17 @@
 
 body {
 	font-family: 'Rubik', sans-serif;
-	@apply bg-slate-900 text-slate-200;
+	@apply bg-slate-200 text-slate-800 text-3xl font-bold;
+}
+
+.button {
+	@apply shadow-lg rounded-md border-4 border-slate-800 hover:bg-slate-800 hover:text-slate-300 duration-300;
+}
+
+.panel-button {
+	@apply p-3;
+}
+
+.action-button {
+	@apply flex-1;
 }

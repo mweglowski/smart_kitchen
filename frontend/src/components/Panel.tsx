@@ -2,9 +2,10 @@ import React from 'react'
 
 type PanelProps = {
   onProductListDisplayChange: (newDisplay: boolean) => void;
+  onFetchRecipe: () => void;
 }
 
-const Panel = ({ onProductListDisplayChange }: PanelProps) => {
+const Panel = ({ onProductListDisplayChange, onFetchRecipe }: PanelProps) => {
   const productListDisplayChangeHandler = () => {
     onProductListDisplayChange(true);
   }
@@ -13,7 +14,7 @@ const Panel = ({ onProductListDisplayChange }: PanelProps) => {
     <div className='p-4 rounded-md w-full h-full justify-center items-center flex flex-col'>
       {/* BUTTONS */}
       <div className='gap-4 flex flex-col w-[70%]'>
-        <button className='button w-full panel-button'>RUN</button>
+        <button className='button w-full panel-button' onClick={onFetchRecipe}>RUN</button>
 
         {/* BUTTONS TO MANIPULATE INGREDIENTS */}
         <div className='flex gap-4'>
